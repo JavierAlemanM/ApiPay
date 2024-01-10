@@ -3,7 +3,7 @@ import morgan from "morgan";
 import cors from "cors"
 
 //importando rutas 
-import prueba from "./routes/prueba.js"
+import  locked from "./routes/locked.js"
 
 const app = express()
 
@@ -17,7 +17,7 @@ app.use(morgan('combined'));
 
 
 //usando rutas
-app.use("/prueba",prueba)
+app.use("/locked", locked)
 
 
 

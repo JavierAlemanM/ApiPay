@@ -9,9 +9,10 @@ export const create = async () =>{
 
 
 const createUser = async () =>{
+
    try {
       await pool.query(
-         `create table users(
+         `CREATE TABLE IF NOT EXISTS  users(
             id serial primary key,
             name varchar(60),
             document int,
@@ -22,7 +23,9 @@ const createUser = async () =>{
             password varchar(60),
             typeuser int
          )`); 
+         pool.end();
    } catch (error) {
       console.log('error creando tabla users: '+error); 
    }
 }
+
