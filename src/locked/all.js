@@ -44,8 +44,8 @@ const createUsers = async () =>{
          `CREATE TABLE IF NOT EXISTS  users(
             id serial primary key,
             name varchar(60),
-            document int,
-            phone int,
+            document bigint,
+            phone bigint,
             email varchar(60),
             gender varchar(1),
             username varchar(60),
